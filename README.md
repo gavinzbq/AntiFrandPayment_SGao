@@ -45,7 +45,7 @@ To manually run the program and print output files to `/paymo_output` directory:
 	 
 ##Results
 
-`batch_payment.txt` was used to generate the graph representing the initial payment network. 
+File `batch_payment.txt` was used to generate the graph representing the initial payment network. 
 
 File `NewTransfer.txt` is the first 20 lines from `stream_payment.txt`. By running command: 
 
