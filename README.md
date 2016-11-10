@@ -1,6 +1,6 @@
 # Insight Data Engineering Coding Challenge
 
-* *Shanyun Gao*
+###Shanyun Gao
 
 shanyun@g.clemson.edu
 
@@ -115,6 +115,7 @@ trusted
 trusted
 trusted
 `
+
 It can be observed that there is an increase in *trusted* payment requests when expanding the feature to large social network.
 
 
