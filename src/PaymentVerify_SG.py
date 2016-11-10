@@ -68,7 +68,7 @@ class Graph(object):
         path = path + [node1]
         if node1 == node2:
             return path
-        if node1 not in self._graph:
+        if (node1 not in self._graph) or (node2 not in self._graph):
             return None
         for node in self._graph[node1]:
             if node not in path:
@@ -84,7 +84,7 @@ class Graph(object):
         path = path + [node1]
         if node1 == node2:
             return path
-        if node1 not in self._graph:
+        if (node1 not in self._graph) or (node2 not in self._graph):
             return None
         for node in self._graph[node1]:
             if node not in path:
@@ -100,7 +100,7 @@ class Graph(object):
         path = path + [node1]
         if node1 == node2:
             return path
-        if node1 not in self._graph:
+        if (node1 not in self._graph) or (node2 not in self._graph):
             return None
         for node in self._graph[node1]:
             if node not in path:
