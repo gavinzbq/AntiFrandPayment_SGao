@@ -71,6 +71,7 @@ trusted
 `
 
 *feature 2*:
+
 `trusted
 trusted
 trusted
@@ -93,6 +94,7 @@ trusted
 `
 
 *feature 3*:
+
 `trusted
 trusted
 trusted
