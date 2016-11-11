@@ -4,4 +4,4 @@
 # but could be replaced with similar files from any major language
 
 # I'll execute my programs, with the input directory paymo_input and output the files in the directory paymo_output
-python ./src/PaymentVerify_SG.py --transferverify ./paymo_input/batch_payment.txt ./paymo_input/stream_payment.txt 
+python ./src/MAIN.py --transferverify ./paymo_input/batch_payment.txt ./paymo_input/stream_payment.txt 
