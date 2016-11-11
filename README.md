@@ -40,7 +40,7 @@ The program can be launched by running *run.sh* Bash script:
 
 To manually run the program and print output files to `/paymo_output` directory:
 
-`python ./src/PaymentVerify_SG --transferverify ./paymo_input/batch_payment.txt ./paymo_input/stream_payment.txt`
+`python ./src/MAIN.py --transferverify ./paymo_input/batch_payment.txt ./paymo_input/stream_payment.txt`
 
 	 
 ##Results
@@ -49,7 +49,7 @@ File `batch_payment.txt` was used to generate the graph representing the initial
 
 File `NewTransfer.txt` is the first 20 lines from `stream_payment.txt`. By running command: 
 
-`python ./src/PaymentVerify_SG --transferverify ./paymo_input/batch_payment.txt ./paymo_input/NewTransfer_payment.txt`
+`python ./src/MAIN.py --transferverify ./paymo_input/batch_payment.txt ./paymo_input/NewTransfer_payment.txt`
 
 three output .txt files were generated in `/paymo_output` directory. The results are when implementing *feature 1*:
 
