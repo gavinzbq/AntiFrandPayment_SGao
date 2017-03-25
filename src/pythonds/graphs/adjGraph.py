@@ -10,9 +10,11 @@ import os
 import unittest
 
 class Graph:
-    def __init__(self):
+    # use 'directed' parameter to indicate if the graph is directed or not
+    def __init__(self,directed = False):
         self.vertices = {}
         self.numVertices = 0
+        self._directed = directed
         
     def addVertex(self,key):
         self.numVertices = self.numVertices + 1
@@ -35,6 +37,8 @@ class Graph:
             if t not in self.vertices:
                 nv = self.addVertex(t)
             self.vertices[f].addNeighbor(self.vertices[t],cost)
+            if not self._directed:
+                self.vertices[t].addNeighbor(self.vertices[f],cost)
     
     def getVertices(self):
         return list(self.vertices.keys())
