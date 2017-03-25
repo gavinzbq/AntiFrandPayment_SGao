@@ -58,15 +58,21 @@ def verifyNew(filename1, filename2, max_dist):
 
     payG = buildGraph(filename1) 
 
-    for users in genUser(filename2):
-        
-        start = time.time()
-        print searchPath(payG, payG.getVertex(users[0]), payG.getVertex(users[1]), max_dist)
-        end = time.time()
-        print (end - start)
+    with open(os.path.join(os.getcwd(),'paymo_output/outfile.txt'),'w') as outfile:
+        for users in genUser(filename2):
+            
+            # start = time.time()
+            # print searchPath(payG, payG.getVertex(users[0]), payG.getVertex(users[1]), max_dist)
+            # end = time.time()
+            # print (end - start)
+            found = searchPath(payG, payG.getVertex(users[0]), payG.getVertex(users[1]), max_dist)
+            if found:
+                outfile.write('%s\n' % 'trusted')
+            elif not found:
+                outfile.write('%s\n' % 'unverified')
 
-        # update payment graph
-        payG.addEdge(users[0], users[1])
+            # update payment graph
+            payG.addEdge(users[0], users[1])
 
 def main():
     if len(sys.argv) != 4:
